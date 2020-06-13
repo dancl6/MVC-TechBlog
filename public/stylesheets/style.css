@@ -1,0 +1,52 @@
+.headers {
+  color: white;
+
+  width: 100px;
+  float: left;
+
+}
+
+header {
+  background-color: rgb(27, 2, 18);
+  display: flex;
+}
+
+.home {
+  float: left;
+  width: 60px;
+}
+
+.dashboard {
+ float: left;
+ width: 60px;
+}
+
+.testing {
+  color: white;
+}
+
+.title {
+  width: 250px;
+  background-color: rgb(163, 219, 165);
+  text-align: center;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+}
+
+/* .heading1 {
+  width: 80px;
+}
+
+.heading2 {
+  width: 80px;
+} */
+
+/* .logout {
+  display: inline;
+} */
