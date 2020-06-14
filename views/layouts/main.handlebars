@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,19 +17,7 @@
 
 <header>
 
-    <nav class="navbar navbar-dark bg-dark testing">
-        <ul class="nav">
-            <li class="nav-item ">
-              <a class="nav-link active white" href="#">Home</a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link white" href="#">Dahsboard</a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link white" href="#">Logout</a>
-            </li>
-          </ul>
-    </nav>
+
     <nav class="navbar navbar-dark bg-dark testing">
        <div class="title">
         <h3 class="black">The Tech Blog</h3>
@@ -38,7 +26,46 @@
     </nav>
         
 </header>
+{{{ body }}}
+</body>
 
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tech Blog</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+    <h1>
+      <a href="/">The Tech Blog</a>
+    </h1>
+<nav>
+  {{#if loggedIn}}
+  <a href="/dashboard">dashboard</a>
+  <button id="logout" class="btn-no-style">logout</button>
+  {{else}}
+  <a href="/login">login</a>
+  {{/if}}
+</nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
 </body>
 
 </html>

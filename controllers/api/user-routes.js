@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   
     // Access our User model and run .findAll() method)
     User.findAll({
-      attributes: { exclude: ['password'] },
+    //   attributes: { exclude: ['password'] },
  
       
     })
@@ -101,5 +101,16 @@ router.post('/', (req, res) => {
       });  
     });
   });
+
+  router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+});
 
   module.exports = router;
