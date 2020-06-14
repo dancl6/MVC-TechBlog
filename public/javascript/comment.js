@@ -1,12 +1,13 @@
 async function commentFormHandler(event) {
     event.preventDefault();
-    console.log("I am here at comment");
+
     // const comme
     
   const title = document.querySelector('#post-title').value.trim();
   const comment = document.querySelector('#post-url').value.trim();
   const user_id = 5;
-    if (comment_text) {
+    if (comment) {
+      console.log("I am here at comment");
       const response = await fetch('/api/posts/', {
         method: 'POST',
         body: JSON.stringify({
