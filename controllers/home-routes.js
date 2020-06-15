@@ -30,6 +30,8 @@ router.get('/', (req, res) => {
     .then(dbPostData => {
       // pass a single post object into the homepage template
       console.log(dbPostData[0]);
+      console.log(" this is db Post data:");
+      console.log(dbPostData);
       const posts = dbPostData.map(post => post.get({ plain: true }));
       // res.render('homepage', dbPostData[0].get({ plain: true }));
       res.render('homepage', {
@@ -80,6 +82,8 @@ router.get('/post/:id', (req, res) => {
     ]
   })
     .then(dbPostData => {
+      console.log("this is db post data:");
+      console.log(dbPostData);
       if (!dbPostData) {
         res.status(404).json({ message: 'No post found with this id' });
         return;
