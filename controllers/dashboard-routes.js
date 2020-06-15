@@ -46,7 +46,8 @@ router.get('/', (req, res) => {
     Post.create({
       title: req.body.title,
       comment: req.body.comment,
-      user_id: req.session.user_id
+      user_id: req.session.user_id,
+      user_name: req.session.user_name
     })
     .then(dbPostData => {
       // serialize data before passing to template
