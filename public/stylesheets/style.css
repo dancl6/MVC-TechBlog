@@ -230,3 +230,31 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
+
+.title {
+  text-align: left;
+  background-color: black;
+  color: white;
+  float: left;
+  width: 70%;
+}
+
+.post {
+  text-align: left;
+  background-color: rgb(196, 247, 196);
+  color: black;
+}
+
+.wide {
+  width: 100%;
+
+}
+
+.meta {
+  height: 80px;
+}
+
+.user {
+  width: 200px;
+  float: left;
+}

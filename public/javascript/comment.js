@@ -5,7 +5,7 @@ async function commentFormHandler(event) {
     
   const title = document.querySelector('#post-title').value.trim();
   const comment = document.querySelector('#post-url').value.trim();
-  const user_id = 5;
+  // const user_id = 5;
     if (comment) {
       console.log("I am here at comment");
       const response = await fetch('/api/posts/', {
