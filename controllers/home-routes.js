@@ -1,16 +1,17 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
+// const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
   console.log(req.session);
   Post.findAll({
     attributes: [
       'id',
+      // 'post_url',
       'title',
-      'comment',
-      'created_at',
-    //   [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      'created_at'
+      // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
@@ -30,8 +31,6 @@ router.get('/', (req, res) => {
     .then(dbPostData => {
       // pass a single post object into the homepage template
       console.log(dbPostData[0]);
-      console.log(" this is db Post data:");
-      console.log(dbPostData);
       const posts = dbPostData.map(post => post.get({ plain: true }));
       // res.render('homepage', dbPostData[0].get({ plain: true }));
       res.render('homepage', {
@@ -61,10 +60,10 @@ router.get('/post/:id', (req, res) => {
     },
     attributes: [
       'id',
+      // 'post_url',
       'title',
-      'comment',
-      'created_at',
-    //   [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      'created_at'
+      // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
@@ -82,8 +81,6 @@ router.get('/post/:id', (req, res) => {
     ]
   })
     .then(dbPostData => {
-      console.log("this is db post data:");
-      console.log(dbPostData);
       if (!dbPostData) {
         res.status(404).json({ message: 'No post found with this id' });
         return;
@@ -104,15 +101,6 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
-router.get('/create-post', (req, res) => {
-  // if (!req.session.loggedIn) {
-  //   res.redirect('/');
-  //   return;
-  // }
-
-  // res.render('create-post');
-  res.render('create-post', { loggedIn: true });
-});
 
 
 module.exports = router;
