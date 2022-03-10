@@ -6,7 +6,7 @@
 
 ## Description
 
-A website that allows users to comment on their favorite technologies and comment on other people's posts.
+A website that allows users to comment on their favorite technologies and comment on other people's posts. Technologies used consisted of bcrypt, dotenv, express, node.js, mysql2 and sequelize.
 
 ## Table of Contents
 * [Badges](#badges)
