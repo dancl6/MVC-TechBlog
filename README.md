@@ -10,9 +10,11 @@ A website that allows users to comment on their favorite technologies and commen
 
 ## Table of Contents
 * [Badges](#badges)
-* [Description](#description)
+* [Description](#description)* [Deployment](#deployed)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Deployment](#deployed)
+* [Deployment](#deployed)
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
@@ -25,6 +27,14 @@ npm i    node index.js
 ## Usage 
 
 Sign up or log in to comment.
+
+## Deployment
+
+[Deployed App](https://mvc-tech-blog-dan.herokuapp.com/)
+
+## Deployment
+
+[Deployed App](${data.deployed})
 
 ## License
 
