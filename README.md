@@ -32,9 +32,6 @@ Sign up or log in to comment.
 
 [Deployed App](https://mvc-tech-blog-dan.herokuapp.com/)
 
-## Deployment
-
-[Deployed App](${data.deployed})
 
 ## License
 
