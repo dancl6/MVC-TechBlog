@@ -14,7 +14,6 @@ A website that allows users to comment on their favorite technologies and commen
 * [Installation](#installation)
 * [Usage](#usage)
 * [Deployment](#deployed)
-* [Deployment](#deployed)
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
